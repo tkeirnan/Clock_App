@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-  <html>
+  <html lang="en">
   <head>
-  <meta charset="utf-8">
-  <title>JavaScript current day and time</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>JavaScript current day and time</title>
   </head>
   <body>
-      <p id="year">Test</p>
-      <div id="month"></div>
-      <div id="day"></div>
-      <div id="date"></div>
-      <div id="hours"></div>
-      <div id="minutes"></div>
-      <div id="seconds"></div>
+    <div id="date-container">
+      <span id="day-of-week"></span> <span id="current-month"> </span id="day-number"> </span>
+    </div>
+    <div id="clock-container">
+      <div class="time-box">
+        <p id="hours"></p><span class="colon">:</span>
+      </div>
+      <div class="time-box">
+        <p id="minutes"></p><span class="colon">:</span>
+      </div>
+      <div class="time-box">
+        <p id="seconds"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
