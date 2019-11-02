@@ -3,24 +3,28 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>JavaScript current day and time</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <title>JavaScript Demo Clock</title>
   </head>
   <body>
-    <div id="date-container">
-      <span id="day-of-week"></span> <span id="current-month"> </span id="day-number"> </span>
-    </div>
-    <div id="clock-container">
-      <div class="time-box">
-        <p id="hours"></p><span class="colon">:</span>
-      </div>
-      <div class="time-box">
-        <p id="minutes"></p><span class="colon">:</span>
-      </div>
-      <div class="time-box">
-        <p id="seconds"></p>
-      </div>
-    </div>
-
+    
+    <table width="100%" cellspacing="0" cellpadding="0" >
+      <tr>
+        <td valign="center">
+            <div id="clock-container">
+                <div class="time-box">
+                  <p id="hours"></p><span class="colon">:</span>
+                  <p id="minutes"></p><span class="colon">:</span>
+                  <p id="seconds"></p>
+                </div>
+            </div>
+            <div id="date-container">
+                  <p id="day-of-week"></p> <p id="current-month"> <p id="day-number"> </p>
+            </div>
+        </td>
+      </tr>
+    </table>
     <script src="script.js"></script>
+    
   </body>
 </html>
