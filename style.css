@@ -13,16 +13,21 @@
     left:25%;
 }
 
-#day-of-week {
+#day-month-date {
 
     font-family: 'Orbitron', sans-serif;
     font-size: 3vw;
     color: orangered;  
 }
 
-#day-number {
+#time{
+    color: black;
+    display: inline;
+    font-size: 7vw;
+    font-family: 'Orbitron', sans-serif;
+    
+    vertical-align: middle;
 
-    color: blue;  
 }
 
 p {
