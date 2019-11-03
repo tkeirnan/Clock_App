@@ -1,16 +1,14 @@
 
-#clock-container {
+#clock{
+    color: black;
+    display: inline;
+    font-size: 6vw;
+    font-family: 'Orbitron', sans-serif;
+    vertical-align: middle;
     text-align: center;
     position: absolute;
     top:25%;
-    left: 25%;
-}
-
-#date-container {
-    text-align: center;
-    position: absolute;
-    top:40%;
-    left:25%;
+    right: 40%;
 }
 
 #day-month-date {
@@ -18,32 +16,15 @@
     font-family: 'Orbitron', sans-serif;
     font-size: 3vw;
     color: orangered;  
-}
-
-#time{
-    color: black;
-    display: inline;
-    font-size: 7vw;
-    font-family: 'Orbitron', sans-serif;
-    
-    vertical-align: middle;
-
-}
-
-p {
-    color: black;
-    display: inline;
-    font-size: 7vw;
-    font-family: 'Orbitron', sans-serif;
-    
-    vertical-align: middle;
-}
-
-span.colon {
-    color: orangered;
-    font-size:8vw;
-    font-family: 'Orbitron', sans-serif;
-    vertical-align: middle;
     text-align: center;
+    position: absolute;
+    top:35%;
+    right:40%;
 }
 
+#changeFormat {
+    position: absolute;
+    text-align: center;
+    top:50%;
+    right: 40%;
+}
