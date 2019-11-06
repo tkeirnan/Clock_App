@@ -40,9 +40,11 @@ var updateTime = function() {
     else {
         var suffix = hours >= 12 ? "PM" : "AM",
             hours12 = hours % 12;
+            hours12 = ("0" + hours12).slice(-2);
         
-        timeDisplay.innerText = hours12 + ":" + minutes + ":" + seconds + " " + suffix;
-    }    
+        timeDisplay.innerText = hours12 + ":" + minutes + ":" + seconds + " " + suffix; 
+        
+    }   
 
 };
 
