@@ -35,16 +35,19 @@ var updateTime = function() {
         seconds = ("0" + seconds).slice(-2);
 
     if(is24Hour) {
-        timeDisplay.innerText = hours + ":" + minutes + ":" + seconds;
+    timeDisplay.innerText = hours + ":" + minutes + ":" + seconds;
+    } else {
+    
+    var suffix = hours >= 12 ? "PM" : "AM",
+    hours12 = hours % 12;
+            
+    if (hours12 === 0) {
+        hours12 = 12;
     }
-    else {
-        var suffix = hours >= 12 ? "PM" : "AM",
-            hours12 = hours % 12;
-            hours12 = ("0" + hours12).slice(-2);
         
-        timeDisplay.innerText = hours12 + ":" + minutes + ":" + seconds + " " + suffix; 
-        
-    }   
+  timeDisplay.innerText = hours12 + ":" + minutes + ":" + seconds + " " + suffix;         
+}  
+   
 
 };
 
