@@ -1,4 +1,4 @@
-//IIFE - 
+//IIFE -
 
 // (function() {
 //     let name = "Andy"; // can't access in the global scope
@@ -32,7 +32,12 @@
     "December"
   ];
 
+  let is24Hour = false;
+  const timeDisplay = document.getElementById("clock");
+  const changeButton = document.getElementById("changeFormat");
+
   function updateCalendar() {
+    console.log("updateCalendar() ran!");
     const today = new Date();
 
     const day = today.getDay();
@@ -44,35 +49,29 @@
       dayArray[day] + ", " + monthArray[month] + " " + date;
   }
 
-  setInterval(updateCalendar, 1000);
+    var updateTime = function() {
+        console.log("updateTime() ran!");
+        var currentDate = new Date(),
+          hours = currentDate.getHours();
+        hours = ("0" + hours).slice(-2);
+        (minutes = currentDate.getMinutes()), (minutes = ("0" + minutes).slice(-2));
+        seconds = currentDate.getSeconds();
+        seconds = ("0" + seconds).slice(-2);
 
-  updateCalendar();
+        if (is24Hour) {
+            timeDisplay.innerText = hours + ":" + minutes + ":" + seconds;
+        } else {
+          var suffix = hours >= 12 ? "PM" : "AM",
+            hours12 = hours % 12;
 
-  var is24Hour = false;
-  let timeDisplay = document.getElementById("clock");
-  let changeButton = document.getElementById("changeFormat");
+        if (hours12 === 0) {
+            hours12 = 12;
+        }
 
-  var updateTime = function() {
-    var currentDate = new Date(),
-      hours = currentDate.getHours();
-    hours = ("0" + hours).slice(-2);
-    (minutes = currentDate.getMinutes()), (minutes = ("0" + minutes).slice(-2));
-    seconds = currentDate.getSeconds();
-    seconds = ("0" + seconds).slice(-2);
-
-    if (is24Hour) {
-      timeDisplay.innerText = hours + ":" + minutes + ":" + seconds;
-    } else {
-      var suffix = hours >= 12 ? "PM" : "AM",
-        hours12 = hours % 12;
-
-      if (hours12 === 0) {
-        hours12 = 12;
-      }
-
-      timeDisplay.innerText =
-        hours12 + ":" + minutes + ":" + seconds + " " + suffix;
-    }
+        timeDisplay.innerText =
+            hours12 + ":" + minutes + ":" + seconds + " " + suffix;
+       }
+    updateCalendar();   
   };
 
   var changeFormat = function() {
