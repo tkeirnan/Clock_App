@@ -41,42 +41,42 @@
      dayArray[day] + ", " + monthArray[month] + " " + date;
   }
 
-    var updateTime = function() {
-        console.log(is24Hour);
-        var currentDate = new Date(),
-          hours = currentDate.getHours();
-          hours = ("0" + hours).slice(-2);
-          (minutes = currentDate.getMinutes()), (minutes = ("0" + minutes).slice(-2));
-          seconds = currentDate.getSeconds();
-          seconds = ("0" + seconds).slice(-2);
+  var updateTime = function() {
+      var currentDate = new Date(),
+        hours = currentDate.getHours();
+        hours = ("0" + hours).slice(-2);
+        (minutes = currentDate.getMinutes()), (minutes = ("0" + minutes).slice(-2));
+        seconds = currentDate.getSeconds();
+        seconds = ("0" + seconds).slice(-2);
 
-          var suffix = hours >= 12 ? "PM" : "AM";
+        var suffix = hours >= 12 ? "PM" : "AM";
 
-          if (is24Hour) {
-             displayTime(hours, suffix)
-            } else {
-              
-              let hours12 = hours % 12;
+        if (is24Hour) {
+          timeDisplay.innerText = hours + ":" + minutes + ":" + seconds;
+          } else {
+            
+            let hours12 = hours % 12;
 
-            if (hours12 === 0) {
-                hours12 = 12;
-            }
-            hours12 = ("0" + hours).slice(-2);
+          if (hours12 === 0) {
+              hours12 = 12;
+          }
+          
+          
+          timeDisplay.innerText = hours12 + ":" + minutes + ":" + seconds + " " + suffix;
+          
+      }
+      updateCalendar();   
+  };
 
-            displayTime(hours12, suffix)
-        }
-        updateCalendar();   
-    };
+  function displayTime(hours, suffix){
+      timeDisplay.innerText =
+              hours + ":" + minutes + ":" + seconds + " " + suffix;
 
-    function displayTime(hours, suffix){
-        timeDisplay.innerText =
-                hours + ":" + minutes + ":" + seconds + " " + suffix;
+  }
 
-    }
-
-    var changeFormat = function() {
-        is24Hour = !is24Hour;
-    };
+  var changeFormat = function() {
+      is24Hour = !is24Hour;
+  };
 
   changeButton.addEventListener("click", changeFormat);
   window.setInterval(updateTime, 1000);
