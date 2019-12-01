@@ -13,7 +13,7 @@ Creating this application required creating an IIFE function that provided a sco
 
 ### Available at:
 
-If you wish to visit this app visit the URL below.
+If you wish to see this app visit the URL below.
 
 ```
 https://www.tommykeirnan.com/ClockAppIndex.html
