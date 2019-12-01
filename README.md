@@ -1,6 +1,6 @@
 # Tommy Keirnan's Clock App
 
-Using HTML, CSS, and Vanilla JavaScript, Tommy was able to create a Clock application that allows the user to click on a button to view their local time in Military or Civilian format. 
+Using HTML, CSS, and Vanilla JavaScript, Tommy was able to create a clock application that allows a user to click on a button to view their local time in Military or Civilian format. 
 
 Creating this application required creating an IIFE function that provided a scope for the developer to create variables that summoned the hours, minutes, seconds, day and date found in the user's local system. 
 
